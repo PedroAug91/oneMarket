@@ -1,0 +1,10 @@
+import AppError from "../../common/models/appError.js";
+{{ ImportModel }}
+import type { Request, Response, NextFunction } from "express";
+import type { ResponseSchema } from "../../common/types";
+
+class {{ ControllerName }} {
+    // ...
+}
+
+export default {{ ControllerName }};

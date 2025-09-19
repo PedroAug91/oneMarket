@@ -1,0 +1,12 @@
+import e from "express";
+import {{ ControllerName }} from "../controllers/{{ ControllerFile }}.controller.js";
+
+import type { Router, RouterOptions } from "express";
+
+const routerConfigs: RouterOptions = {
+    // ...
+};
+
+const {{ RouterName }}: Router = e.Router(routerConfigs);
+
+export default {{ RouterName }};

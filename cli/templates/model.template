@@ -1,0 +1,8 @@
+import type { Table } from "../../common/types/index.js";
+
+class {{ ModelName }} {
+    static tableName: Table = "{{ TableName }}" as const;
+    // ...
+}
+
+export default {{ ModelName }};

@@ -1,0 +1,15 @@
+import { Kysely } from "kysely";
+
+// Rodar as migrations
+
+async function up(db: Kysely<any>): Promise<void> {
+    // ...
+}
+
+// Reverter as migrations
+
+async function down(db: Kysely<any>): Promise<void> {
+    // ...
+}
+
+export { up, down };

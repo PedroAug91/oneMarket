@@ -1,0 +1,50 @@
+{
+    "name": "express-ts-template",
+    "version": "1.1.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npx tsx --watch src/index.ts",
+        "build": "npx tsc",
+        "start": "node dist/index.js",
+        "migrate:latest": "npx tsx ./cli/migrateLatest.ts",
+        "migrate:down": "npx tsx ./cli/migrateDown.ts",
+        "make:migration": "npx tsx ./cli/createMigration.ts",
+        "make:model": "npx tsx ./cli/createModel.ts",
+        "make:controller": "npx tsx ./cli/createController.ts",
+        "make:router": "npx tsx ./cli/createRouter.ts",
+        "db:types": "npx kysely-codegen && npx tsx ./cli/updateDBTypes.ts",
+        "prettier": "npx prettier -w ./src"
+    },
+    "keywords": [],
+    "author": "Caju Softwares",
+    "license": "ISC",
+    "description": "Template for ExpressJS typescript apps",
+    "devDependencies": {
+        "@inquirer/prompts": "^7.5.3",
+        "@types/chalk": "^0.4.31",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.3",
+        "@types/inquirer": "^9.0.8",
+        "@types/jsonwebtoken": "^9.0.10",
+        "@types/luxon": "^3.6.2",
+        "@types/node": "^24.0.5",
+        "@types/pg": "^8.15.4",
+        "chalk": "^5.4.1",
+        "inquirer-select-pro": "^1.0.0-alpha.9",
+        "kysely-codegen": "^0.18.5",
+        "prettier": "^3.5.3",
+        "tsx": "^4.20.3",
+        "typescript": "^5.9.2"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
+        "express": "^5.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "kysely": "^0.28.2",
+        "luxon": "^3.6.1",
+        "pg": "^8.16.2"
+    }
+}

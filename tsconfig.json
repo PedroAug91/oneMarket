@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        /* Language compilation options */
+        "target": "ES2020",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Type checking rules */
+
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+    },
+    "include": ["src/**/*"],
+    "exclude": ["**/migrations/", "**/tools/", "**/types/"]
+}

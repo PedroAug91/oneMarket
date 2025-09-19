@@ -1,0 +1,19 @@
+import { Kysely } from "kysely";
+
+// Rodar as migrations
+
+async function up(db: Kysely<any>): Promise<void> {
+    await db.schema
+        .alterTable("{{ TableName }}")
+        .execute();
+}
+
+// Reverter as migrations
+
+async function down(db: Kysely<any>): Promise<void> {
+//    await db.schema
+//      .alterTable("{{ TableName }}")
+//      .execute();
+}
+
+export { up, down };

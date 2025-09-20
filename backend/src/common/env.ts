@@ -5,12 +5,12 @@ const ENVPATH = path.resolve(process.cwd(), ".env");
 configDotenv({ path: ENVPATH });
 
 interface Env {
-    node_port: number;
-    node_env: string;
-    node_host: string;
-    node_cors_origin: string;
-    node_common_rate_limit_window_ms: number;
-    node_common_rate_limit_max_requests: number;
+    api_port: number;
+    api_env: string;
+    api_host: string;
+    api_cors_origin: string;
+    api_common_rate_limit_window_ms: number;
+    api_common_rate_limit_max_requests: number;
     db_connection: string;
     db_host: string;
     db_port: number;
@@ -22,16 +22,12 @@ interface Env {
 }
 
 const env: Env = {
-    node_env: process.env.NODE_ENV as string,
-    node_port: parseInt(process.env.API_PORT as string),
-    node_host: process.env.NODE_HOST as string,
-    node_cors_origin: process.env.NODE_CORS_ORIGIN as string,
-    node_common_rate_limit_window_ms: parseInt(
-        process.env.NODE_COMMON_RATE_LIMIT_WINDOW_MS as string,
-    ),
-    node_common_rate_limit_max_requests: parseInt(
-        process.env.NODE_COMMON_RATE_LIMIT_MAX_REQUESTS as string,
-    ),
+    api_env: process.env.API_ENV as string,
+    api_port: parseInt(process.env.API_PORT as string),
+    api_host: process.env.API_HOST as string,
+    api_cors_origin: process.env.API_CORS_ORIGIN as string,
+    api_common_rate_limit_window_ms: parseInt(process.env.API_COMMON_RATE_LIMIT_WINDOW_MS as string),
+    api_common_rate_limit_max_requests: parseInt(process.env.API_COMMON_RATE_LIMIT_MAX_REQUESTS as string),
     db_connection: process.env.DB_CONNECTION as string,
     db_host: process.env.DB_HOST as string,
     db_port: parseInt(process.env.DB_PORT as string),

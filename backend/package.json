@@ -1,6 +1,6 @@
 {
-    "name": "express-ts-template",
-    "version": "1.1.0",
+    "name": "OneMarket",
+    "version": "0.0.1",
     "main": "index.js",
     "type": "module",
     "scripts": {
@@ -20,7 +20,7 @@
     "keywords": [],
     "author": "Caju Softwares",
     "license": "ISC",
-    "description": "Template for ExpressJS typescript apps",
+    "description": "Marketplace API scaffolded by a template for ExpressJS typescript apps",
     "devDependencies": {
         "@inquirer/prompts": "^7.5.3",
         "@types/chalk": "^0.4.31",

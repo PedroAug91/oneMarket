@@ -1,7 +1,7 @@
 import * as path from "path";
 import { promises as fs } from "fs";
 import { Migrator, FileMigrationProvider } from "kysely";
-import db from "../database/connection";
+import db from "../src/common/database/connection"
 import chalk from "chalk";
 import { ERROR, INFO } from "./cliTools";
 

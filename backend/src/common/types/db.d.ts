@@ -10,9 +10,7 @@ export type Generated<T> = T extends ColumnType<infer S, infer I, infer U>
   : ColumnType<T, T | undefined, T>;
 
 export interface Users {
-  email: string;
   id: Generated<number>;
-  name: string;
 }
 
 export interface DB {

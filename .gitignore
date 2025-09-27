@@ -1,25 +1,25 @@
-node_modules
+**/node_modules
 
 # Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
-tsconfig.tsbuildinfo
-dist
+**/.output
+**/.vercel
+**/.netlify
+**/.wrangler
+**/.svelte-kit
+**/build
+**/tsconfig.tsbuildinfo
+**/dist
 
 # OS
-.DS_Store
-Thumbs.db
-
-# Env
-.env
-.env.*
-!.env.example
-!.env.test
+**/.DS_Store
+**/Thumbs.db
+**/# Env
+**/.env
+**/.env.*
+**/!.env.example
+**/!.env.test
 
 # Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+**/vite.config.js.timestamp-*
+**/vite.config.ts.timestamp-*
+**/frontend/.svelte-kit/generated/server

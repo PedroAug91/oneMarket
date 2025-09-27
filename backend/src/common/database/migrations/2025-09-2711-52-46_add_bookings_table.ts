@@ -4,7 +4,7 @@ import { Kysely } from "kysely";
 
 async function up(db: Kysely<any>): Promise<void> {
     await db.schema
-        .createTable("users")
+        .createTable("bookings")
         .ifNotExists()
         .addColumn("id", "serial", (col) => col.primaryKey())
         .execute();
@@ -13,7 +13,7 @@ async function up(db: Kysely<any>): Promise<void> {
 // Reverter as migrations
 
 async function down(db: Kysely<any>): Promise<void> {
-    await db.schema.dropTable("users").ifExists().execute();
+    await db.schema.dropTable("bookings").ifExists().execute();
 }
 
 export { up, down };

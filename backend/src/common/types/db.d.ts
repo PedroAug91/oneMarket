@@ -9,10 +9,65 @@ export type Generated<T> = T extends ColumnType<infer S, infer I, infer U>
   ? ColumnType<S, I | undefined, U>
   : ColumnType<T, T | undefined, T>;
 
+export interface Addresses {
+  id: Generated<number>;
+}
+
+export interface Availability {
+  id: Generated<number>;
+}
+
+export interface Bookings {
+  id: Generated<number>;
+}
+
+export interface Categories {
+  id: Generated<number>;
+}
+
+export interface CategoriesServices {
+  id: Generated<number>;
+}
+
+export interface Customers {
+  id: Generated<number>;
+}
+
+export interface Reviews {
+  id: Generated<number>;
+}
+
+export interface ServiceImages {
+  id: Generated<number>;
+}
+
+export interface ServiceProviders {
+  id: Generated<number>;
+}
+
+export interface Services {
+  id: Generated<number>;
+}
+
+export interface ServiceVariations {
+  id: Generated<number>;
+}
+
 export interface Users {
   id: Generated<number>;
 }
 
 export interface DB {
+  addresses: Addresses;
+  availability: Availability;
+  bookings: Bookings;
+  categories: Categories;
+  categories_services: CategoriesServices;
+  customers: Customers;
+  reviews: Reviews;
+  service_images: ServiceImages;
+  service_providers: ServiceProviders;
+  service_variations: ServiceVariations;
+  services: Services;
   users: Users;
 }

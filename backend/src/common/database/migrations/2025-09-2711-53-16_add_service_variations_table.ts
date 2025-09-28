@@ -4,10 +4,11 @@ import { Kysely } from "kysely";
 
 async function up(db: Kysely<any>): Promise<void> {
     await db.schema
-        .createTable("service_variations")
-        .ifNotExists()
-        .addColumn("id", "serial", (col) => col.primaryKey())
-        .execute();
+    .createTable("service_variations")
+    .ifNotExists()
+    .addColumn("service_variation_id", "serial", (col) => col.primaryKey())
+    .addColumn("service_type", "varchar(100)", (col) => col.notNull())
+    .execute();
 }
 
 // Reverter as migrations

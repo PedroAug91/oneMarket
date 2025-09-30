@@ -9,58 +9,113 @@ export type Generated<T> = T extends ColumnType<infer S, infer I, infer U>
   ? ColumnType<S, I | undefined, U>
   : ColumnType<T, T | undefined, T>;
 
+export type Timestamp = ColumnType<Date, Date | string, Date | string>;
+
 export interface Addresses {
-  id: Generated<number>;
+  address_id: Generated<number>;
+  city: string;
+  complement: string | null;
+  country: string;
+  latitude: string | null;
+  longitude: string | null;
+  number: number;
+  reference_point: string | null;
+  state: string;
+  street: string;
+  user_id: number;
+  zipcode: string;
 }
 
 export interface Availability {
-  id: Generated<number>;
-}
-
-export interface Bookings {
-  id: Generated<number>;
+  availability_id: Generated<number>;
+  created_at: Generated<Timestamp>;
+  customer_id: number | null;
+  end_date: Timestamp;
+  end_time: string;
+  service_provider_id: number;
+  start_date: Timestamp;
+  start_time: string;
+  status: string;
+  updated_at: Generated<Timestamp>;
+  weekday: number | null;
 }
 
 export interface Categories {
-  id: Generated<number>;
+  category: string;
+  category_id: Generated<number>;
 }
 
 export interface CategoriesServices {
-  id: Generated<number>;
+  category_id: number;
+  service_id: number;
 }
 
 export interface Customers {
-  id: Generated<number>;
+  cpf: string;
+  created_at: Generated<Timestamp>;
+  customer_id: Generated<number>;
+  updated_at: Generated<Timestamp>;
+  user_id: number;
 }
 
 export interface Reviews {
-  id: Generated<number>;
+  comment: string;
+  created_at: Generated<Timestamp>;
+  customer_id: number;
+  rating: number;
+  review_id: Generated<number>;
+  service_id: number;
+  updated_at: Generated<Timestamp>;
 }
 
 export interface ServiceImages {
-  id: Generated<number>;
+  created_at: Generated<Timestamp>;
+  filetype: string;
+  image_name: string;
+  service_id: number;
+  service_images_id: Generated<number>;
+  updated_at: Generated<Timestamp>;
 }
 
 export interface ServiceProviders {
-  id: Generated<number>;
+  cnpj: string;
+  created_at: Generated<Timestamp>;
+  description: string;
+  service_provider_id: Generated<number>;
+  updated_at: Generated<Timestamp>;
+  user_id: number;
 }
 
 export interface Services {
-  id: Generated<number>;
+  created_at: Generated<Timestamp>;
+  description: string;
+  duration: number;
+  price: number;
+  service_id: Generated<number>;
+  service_provider_id: number;
+  service_variation_id: number;
+  updated_at: Generated<Timestamp>;
 }
 
 export interface ServiceVariations {
-  id: Generated<number>;
+  service_type: string;
+  service_variation_id: Generated<number>;
 }
 
 export interface Users {
-  id: Generated<number>;
+  created_at: Generated<Timestamp>;
+  email: string;
+  password: string;
+  phone_number: string;
+  role: string;
+  updated_at: Generated<Timestamp>;
+  user_id: Generated<number>;
+  username: string;
 }
 
 export interface DB {
   addresses: Addresses;
   availability: Availability;
-  bookings: Bookings;
   categories: Categories;
   categories_services: CategoriesServices;
   customers: Customers;

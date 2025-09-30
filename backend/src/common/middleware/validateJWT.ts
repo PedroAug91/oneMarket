@@ -11,7 +11,7 @@ const sendUnauthorizedRes = (res: Response) => {
         data: null,
         message: "Não autorizado.",
     }
-    res.status(402).json(payload);
+    res.status(401).json(payload);
 }
 
 function validateJWT(
@@ -20,9 +20,7 @@ function validateJWT(
     next: NextFunction,
 ) {
     try {
-        const authToken = req.headers["authorization"];
-
-        const token = authToken?.split(" ")[1];
+        const token = req.cookies.auth_token;
 
         if (!token) {
             sendUnauthorizedRes(res);
@@ -35,6 +33,8 @@ function validateJWT(
 
             res.locals.decoded = decoded;
         });
+
+        next()
     } catch (err: any) {
         next(new AppError({ err }))
     }

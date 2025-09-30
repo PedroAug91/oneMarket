@@ -24,10 +24,6 @@ export type SelectableAvailability = Selectable<DB["availability"]>;
 export type InsertableAvailability = Insertable<DB["availability"]>;
 export type UpdateableAvailability = Updateable<DB["availability"]>;
 
-export type SelectableBooking = Selectable<DB["bookings"]>;
-export type InsertableBooking = Insertable<DB["bookings"]>;
-export type UpdateableBooking = Updateable<DB["bookings"]>;
-
 export type SelectableCategory = Selectable<DB["categories"]>;
 export type InsertableCategory = Insertable<DB["categories"]>;
 export type UpdateableCategory = Updateable<DB["categories"]>;

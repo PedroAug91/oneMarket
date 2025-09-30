@@ -21,7 +21,7 @@ de serviços liberais.
 ---
 ### Pré-requisitos
 
-- [Docker](): Instale do Docker engine ou docker desktop na sua máquina
+- [Docker](): Instale o Docker engine ou Docker desktop na sua máquina
 
 ---
 ### Rodar projeto
